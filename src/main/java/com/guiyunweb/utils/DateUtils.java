@@ -37,8 +37,33 @@ public class DateUtils {
         return rightNow.getTime();
     }
 
-    public static String getYyMMdd(Date date) {
+    /**
+     * 时间格式化输出 精确到天
+     * @param date
+     * @return
+     */
+    public static String getDateStringAccurateDay(Date date) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(date);
+    }
+
+    /**
+     * 时间格式化输出 精确到秒
+     * @param date
+     * @return
+     */
+    public static String getDateStringAccurateSecond(Date date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(date);
+    }
+
+    /**
+     * 自定义时间格式化输出
+     * @param date
+     * @return
+     */
+    public static String format(Date date,String format) {
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(date);
     }
 

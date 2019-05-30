@@ -10,11 +10,11 @@ public class DateUtilsTest {
 
     @Test
     public void getAfterDaysTime() {
-        System.out.println(DateUtils.getYyMMdd(DateUtils.getAfterDaysTime(new Date(),1)));
+        System.out.println(DateUtils.getDateStringAccurateDay(DateUtils.getAfterDaysTime(new Date(),1)));
     }
 
     @Test
-    public void getAfterMonsTime() {
-        System.out.println(DateUtils.getYyMMdd(DateUtils.getAfterMonsTime(new Date(),1)));
+    public void getDateStringAccurateSecond() {
+        System.out.println(DateUtils.getDateStringAccurateSecond(DateUtils.getAfterMonsTime(new Date(),1)));
     }
 }
