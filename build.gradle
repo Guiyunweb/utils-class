@@ -2,6 +2,11 @@ plugins {
     id 'java'
 }
 
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
 group 'com.guiyunweb'
 version '1.0-SNAPSHOT'
 
