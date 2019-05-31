@@ -52,7 +52,7 @@ public class DateUtils {
      * @param date
      * @return
      */
-    public static String getDateStringAccurateSecond(Date date) {
+    public static String getDateStringAccurateSec(Date date) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return sdf.format(date);
     }

@@ -15,6 +15,6 @@ public class DateUtilsTest {
 
     @Test
     public void getDateStringAccurateSecond() {
-        System.out.println(DateUtils.getDateStringAccurateSecond(DateUtils.getAfterMonsTime(new Date(),1)));
+        System.out.println(DateUtils.getDateStringAccurateSec(DateUtils.getAfterMonsTime(new Date(),1)));
     }
 }
