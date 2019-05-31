@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 时间工具类
  */
-public class DateUtils {
+public class DateUtil {
 
     /**
      * 得到任意天数后的日期

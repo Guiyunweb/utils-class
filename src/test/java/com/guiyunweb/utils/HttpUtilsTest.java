@@ -7,8 +7,6 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.*;
-
 public class HttpUtilsTest {
 
     @Test
@@ -20,7 +18,7 @@ public class HttpUtilsTest {
         String bodys = "";
         Map<String, String> headers = new HashMap<String, String>();
         try {
-            HttpResponse response = HttpUtils.doPost(host, path, method, headers, querys, bodys);
+            HttpResponse response = HttpUtil.doPost(host, path, method, headers, querys, bodys);
             //获取response的body
             System.out.println(EntityUtils.toString(response.getEntity()));
         } catch (Exception e) {

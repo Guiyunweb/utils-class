@@ -4,17 +4,15 @@ import org.junit.Test;
 
 import java.util.Date;
 
-import static org.junit.Assert.*;
-
 public class DateUtilsTest {
 
     @Test
     public void getAfterDaysTime() {
-        System.out.println(DateUtils.getDateStringAccurateDay(DateUtils.getAfterDaysTime(new Date(),1)));
+        System.out.println(DateUtil.getDateStringAccurateDay(DateUtil.getAfterDaysTime(new Date(),1)));
     }
 
     @Test
     public void getDateStringAccurateSecond() {
-        System.out.println(DateUtils.getDateStringAccurateSec(DateUtils.getAfterMonsTime(new Date(),1)));
+        System.out.println(DateUtil.getDateStringAccurateSec(DateUtil.getAfterMonsTime(new Date(),1)));
     }
 }

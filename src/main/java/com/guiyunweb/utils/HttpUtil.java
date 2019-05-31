@@ -37,7 +37,7 @@ import java.util.Map;
   	compile('commons-lang:commons-lang:2.6')
  */
 
-public class HttpUtils {
+public class HttpUtil {
 
     /**
      * get

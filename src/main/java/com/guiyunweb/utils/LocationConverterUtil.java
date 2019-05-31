@@ -3,7 +3,7 @@ package com.guiyunweb.utils;
 /**
  * 地图坐标系转换工具类
  */
-public class LocationConverterUtils {
+public class LocationConverterUtil {
     private static final double LAT_OFFSET_0(double x, double y) {
         return -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
     }
