@@ -9,7 +9,7 @@ public class RandomStringUtil {
      * 获取32位UUID
      * @return
      */
-    public static String uuid(){
+    public static String getUUID(){
         return UUID.randomUUID().toString().replaceAll("-", "");
     }
 
