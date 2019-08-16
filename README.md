@@ -4,4 +4,5 @@
  - DateUtil 时间工具类
  - MD5Util md5加密工具类
  - RandomStringUtil 随机字符串工具类
-  - RandomStringUtil 图片工具类
+ - RandomStringUtil 图片工具类
+ - FileUtil 文件工具类
