@@ -7,24 +7,30 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密类
  */
-public class MD5Util {
-    public static String hex(byte[] array) {
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < array.length; ++i) {
-            sb.append(Integer.toHexString((array[i]
-                    & 0xFF) | 0x100).substring(1, 3));
-        }
-        return sb.toString();
-    }
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
-    public static String md5Hex(String message) {
+/**
+ * MD5加密类
+ */
+public class MD5Util {
+    public static String toMD5(String plainText) {
+        Object var1 = null;
+
+        byte[] secretBytes;
         try {
-            MessageDigest md =
-                    MessageDigest.getInstance("MD5");
-            return hex(md.digest(message.getBytes("UTF-8")));
-        } catch (NoSuchAlgorithmException e) {
-        } catch (UnsupportedEncodingException e) {
+            secretBytes = MessageDigest.getInstance("md5").digest(plainText.getBytes());
+        } catch (NoSuchAlgorithmException var4) {
+            throw new RuntimeException("没有md5这个算法！");
         }
-        return null;
+
+        String md5code = (new BigInteger(1, secretBytes)).toString(16);
+
+        for(int i = 0; i < 32 - md5code.length(); ++i) {
+            md5code = "0" + md5code;
+        }
+
+        return md5code;
     }
 }
